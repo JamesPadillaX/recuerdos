@@ -1,0 +1,6 @@
+{
+  "name": "Nuestra Historia — Álbum de Recuerdos",
+  "description": "Un álbum de recuerdos digital, romántico, elegante y cinematográfico que narra una historia especial de agosto de 2024 a febrero de 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
