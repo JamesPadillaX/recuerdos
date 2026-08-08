@@ -139,11 +139,11 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
                         className="photo-frame group cursor-pointer max-w-sm w-full relative"
                         onClick={() => onOpenPhoto(photo)}
                       >
-                        <div className="relative overflow-hidden aspect-[4/3] bg-[#F3EFE6]">
+                        <div className="relative overflow-hidden bg-[#F3EFE6]">
                           <img
                             src={photo.url}
                             alt={photo.alt || page.title}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                             loading="lazy"
                           />
                           <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
