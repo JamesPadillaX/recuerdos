@@ -5,6 +5,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { CoverPage } from './components/CoverPage';
+import { CollagePage } from './components/CollagePage';
 import { PageLayout } from './components/PageLayout';
 import { FinalChapterPage } from './components/FinalChapterPage';
 import { TimelineDrawer } from './components/TimelineDrawer';
@@ -17,9 +18,22 @@ import { startAmbientMusic, stopAmbientMusic, isMusicPlaying } from './utils/aud
 import { MemoryPage, PhotoItem, ViewMode } from './types';
 
 export default function App() {
-  const [viewMode, setViewMode] = useState<ViewMode>('cover');
+  const [viewMode, setViewMode] = useState<ViewMode>(() => {
+    return (localStorage.getItem('recuerdos_viewMode') as ViewMode) || 'cover';
+  });
   const [memories, setMemories] = useState<MemoryPage[]>(() => getSavedMemories());
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentIndex, setCurrentIndex] = useState<number>(() => {
+    const saved = localStorage.getItem('recuerdos_currentIndex');
+    return saved ? parseInt(saved, 10) : 0;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('recuerdos_viewMode', viewMode);
+  }, [viewMode]);
+
+  useEffect(() => {
+    localStorage.setItem('recuerdos_currentIndex', currentIndex.toString());
+  }, [currentIndex]);
 
   // Modals state
   const [isMusicOn, setIsMusicOn] = useState<boolean>(false);
@@ -40,6 +54,36 @@ export default function App() {
     }
   }, []);
 
+  // Intentar reproducir música automáticamente al cargar o al primer clic
+  useEffect(() => {
+    const tryPlayMusic = () => {
+      if (!isMusicPlaying()) {
+        const started = startAmbientMusic();
+        if (started) {
+          setIsMusicOn(true);
+          // Remover listeners una vez que empiece
+          document.removeEventListener('click', tryPlayMusic);
+          document.removeEventListener('keydown', tryPlayMusic);
+          document.removeEventListener('touchstart', tryPlayMusic);
+        }
+      }
+    };
+
+    // Intento 1: Reproducir al instante (puede fallar por políticas del navegador)
+    tryPlayMusic();
+
+    // Intento 2: Reproducir al primer toque/clic en cualquier parte de la pantalla
+    document.addEventListener('click', tryPlayMusic);
+    document.addEventListener('keydown', tryPlayMusic);
+    document.addEventListener('touchstart', tryPlayMusic);
+
+    return () => {
+      document.removeEventListener('click', tryPlayMusic);
+      document.removeEventListener('keydown', tryPlayMusic);
+      document.removeEventListener('touchstart', tryPlayMusic);
+    };
+  }, []);
+
   // Sync index bounds if memories change
   useEffect(() => {
     if (currentIndex >= memories.length) {
@@ -49,7 +93,7 @@ export default function App() {
 
   // Start story from Cover
   const handleStartStory = () => {
-    setViewMode('album');
+    setViewMode('collage');
     setCurrentIndex(0);
     // Optionally start soft ambient music if user hasn't toggled yet
     if (!isMusicPlaying()) {
@@ -70,7 +114,7 @@ export default function App() {
     if (currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
     } else {
-      setViewMode('cover');
+      setViewMode('collage');
     }
   };
 
@@ -111,6 +155,11 @@ export default function App() {
           onOpenGallery={() => setIsGalleryOpen(true)}
           isMusicOn={isMusicOn}
           onToggleMusic={handleToggleMusic}
+        />
+      ) : viewMode === 'collage' ? (
+        <CollagePage
+          onNext={() => setViewMode('album')}
+          onBack={() => setViewMode('cover')}
         />
       ) : currentPage?.isSpecialFinal ? (
         <FinalChapterPage

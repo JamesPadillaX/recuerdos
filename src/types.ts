@@ -31,4 +31,4 @@ export interface MemoryPage {
   specialLetter?: SpecialLetter;
 }
 
-export type ViewMode = 'cover' | 'album' | 'gallery' | 'timeline';
+export type ViewMode = 'cover' | 'collage' | 'album' | 'gallery' | 'timeline';

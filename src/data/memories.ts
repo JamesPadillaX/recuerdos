@@ -1,5 +1,20 @@
-import { MemoryPage } from '../types';
+import { MemoryPage, PhotoItem } from '../types';
 
+export const COLLAGE_PHOTOS: PhotoItem[] = [
+  { id: 'c-1', url: '/images/12.png' },
+  { id: 'c-2', url: '/images/23.png' },
+  { id: 'c-3', url: '/images/22.png' },
+  { id: 'c-4', url: '/images/14.png' },
+  { id: 'c-5', url: '/images/24.png' },
+  { id: 'c-6', url: '/images/9.png' },
+  { id: 'c-7', url: '/images/17.png' },
+  { id: 'c-8', url: '/images/26.png' },
+  { id: 'c-9', url: '/images/21.png' },
+  { id: 'c-10', url: '/images/31.png' },
+  { id: 'c-11', url: '/images/32.png' },
+  
+  // Añade aquí más fotos para el collage. Solo copia una línea y cambia el nombre (ej. 8.png)
+];
 export const INITIAL_MEMORIES: MemoryPage[] = [
   {
     id: 'page-1',
@@ -8,25 +23,25 @@ export const INITIAL_MEMORIES: MemoryPage[] = [
     monthKey: 'AGO 2024',
     title: 'El comienzo',
     subtitle: 'Donde todo cruzó su camino',
-    location: 'El pequeño café de la esquina',
+    location: 'H & M y el cine',
     photos: [
       {
         id: 'p1-1',
-        url: '/images/p1_1.jpg',
-        caption: 'La luz de aquella tarde de agosto',
+        url: '/images/7.png',
+        caption: 'Un sábado inesperado',
         rotation: -1.8,
-        alt: 'Café con luz cálida de tarde'
+        alt: 'Nuestra primera salida'
       },
       {
         id: 'p1-2',
-        url: '/images/p1_2.jpg',
-        caption: 'Tu primera sonrisa sin prisa',
+        url: '/images/6.png',
+        caption: 'Tus hermosos ojos',
         rotation: 1.5,
-        alt: 'Retrato con luz natural cálida'
+        alt: 'Recuerdos de aquel día'
       }
     ],
-    storyText: `Aquella tarde de finales de agosto el calor empezaba a ceder y la luz del atardecer teñía la ciudad con tonos dorados. No sabíamos que un encuentro aparentemente fortuito se convertiría en el punto de partida de algo tan incalculable.\n\nRecuerdo con total claridad cómo la conversación fluyó sin esfuerzo alguno, como si nos conociéramos de toda la vida pero con la emoción intacta de descubrirnos por primera vez. Había una serenidad distinta en tu forma de mirar y una calma que de inmediato me hizo sentir en casa.`,
-    quote: 'Hay comienzos que parecen pequeños, pero terminan significándolo todo.'
+    storyText: `Todo comenzó un sábado, todo fue tan inesperado, no pensé que ese día te encontraría y te amaría con toda mi alma, incluso te lo dije porque no pensaba ir, porque mi perro se había enfermando, incluso lo lleve al veterinario una hora antes de verte, no me arrepiento de nada, solamente de haberte perdido, la impresión que me lleve de ti, son tus hermosos ojos, en ese momento no lo sabía, pero más adelante, aunque no te lo dije, me hubiera gustado tener dos hijos con tus lindos ojos. Aunque el inicio fue el 29 de julio cuando por primera vez entraste al servidor de discord.\n\nEl martes 27 de agosto, salimos por primera vez, te vi cuando llegaste a H y M, y te observe por unos minutos, recuerdo incluso tu vestimenta, un pantalón con cuadros con un top blanco, y una polera amarilla, vimos la película del cuervo y después de comer, te dije si quieres ser mi enamorada, no fue de la mejor manera, pero es un recuerdo que siempre llevare.`,
+    quote: 'No me arrepiento de nada, solamente de haberte perdido.'
   },
   {
     id: 'page-2',
@@ -34,39 +49,66 @@ export const INITIAL_MEMORIES: MemoryPage[] = [
     date: 'SEPTIEMBRE DE 2024',
     monthKey: 'SEPTIEMBRE DE 2024',
     title: 'Los primeros recuerdos',
-    subtitle: 'Risas compartidas en el parque',
-    location: 'Paseo bajo los árboles dorados',
+    subtitle: 'Risas compartidas',
+
     photos: [
       {
         id: 'p2-1',
-        url: '/images/p2_1.jpg',
+        url: '/images/6.png',
+        caption: 'El otoño comenzaba a transformar los árboles',
+        rotation: 2.1,
+        alt: 'Camino de hojas secas al atardecer'
+      },
+      
+      {
+        id: 'p2-2',
+        url: '/images/33.png',
         caption: 'El otoño comenzaba a transformar los árboles',
         rotation: 2.1,
         alt: 'Camino de hojas secas al atardecer'
       }
     ],
-    storyText: `Septiembre trajo consigo las primeras caminatas interminables sin destino fijo. Aprendimos a descifrar los silencios cómodos, las anécdotas de la infancia y las canciones que definían nuestros días.\n\nCada detalle, por simple que pareciera —compartir un café para llevar, caminar bajo las primeras hojas caídas o reírnos de cualquier tontería— empezaba a construir una complicidad única que guardo con enorme gratitud.`,
-    quote: 'A veces los momentos más sencillos son los que dejan las huellas más profundas.'
+    storyText: `Este mes fui increible para mi te regale flores por primera vez, no tengo fotos de eso, porque a mi no me gustaban las fotos, aunque al final termine amandolas porque solo aparecias tu, de igual manera son recuerdos que nunca olvidare, cuando te las entregue, incluso cuando las compre porque no habia hecho nunca eso, recuerdo incluso que le pedi ayuda a un chico
+    y me dio el lugar donde las compro, te lo habia comentado despues de cenar.
+    \n\n Tantas experiencias, incluso tu amiga nos tomo una foto y me la enseñaste, la cual editaste para subir a nuestros 
+    estados, seguramente tu no lo recuerdas, pero yo recuerdo absolutamente todo, cuando te iba a ver a la universidad, me fui de viaje por una semana, cuando llegue 
+    eras lo primero que queria ver, recuerdo que llegue meti mi ropa a mi cuarto, me bañe y sali 
+    a verte como quedamos, estabas con el mismo outfit rosado, que aparece en las fotos de esta seccion.
+    Te amo Jami.
+    \n\n Tambien cuando fuimos a panda los juegos mecanicos, subimos en el carrusel, en el juego de que nos hacia girar, saliste mareada, te deseo lo mejor.
+     \n\n No recuerdo el dia, pero fue la primera vez que te vi comer tu carrot cake.`,
+    quote: 'Te deseo lo mejor, amor.'
   },
   {
     id: 'page-3',
     pageNumber: 'PÁGINA 03',
     date: 'OCTUBRE DE 2024',
     monthKey: 'OCTUBRE DE 2024',
-    title: 'Tardes otoñales',
+    title: 'Muchas anectotas',
     subtitle: 'El viento frío y el calor de tu compañía',
-    location: 'Las calles del centro histórico',
     photos: [
       {
         id: 'p3-1',
-        url: '/images/p3_1.jpg',
-        caption: 'La luz dorada de octubre filtrándose',
+        url: '/images/34.png',
         rotation: -1.5,
         alt: 'Tarde de octubre con hojas secas'
-      }
+      },
+      {
+        id: 'p3-1',
+        url: '/images/2.png',
+        rotation: -1.5,
+        alt: 'Tarde de octubre con hojas secas'
+      },
     ],
-    storyText: `Con la llegada de octubre, los días se hicieron más cortos y el aire más fresco. Sin embargo, caminar a tu lado hacía que cualquier tarde fría se sintiera perfectamente cálida. Descubrimos pequeños rincones de la ciudad que pronto se convertirían en nuestros lugares favoritos.`,
-    quote: 'El otoño es una segunda primavera donde cada hoja es una flor.'
+    storyText: `Octubre un mes con muchas cosas vividas, como cuando te subi a mi historia de tik tok
+    salidas, peliculas, te visite por primera vez en pimentel, estabas igualmente vestida con tu outfit rosado, inolvidable, caminamos por el muelle, te tome fotos, pero esta en mi anterior celular, recuperare eso.
+    \n\n Halloween, recuerdo eso porque no celebramos el mismo 31, fue un viernes, porque recuerdo que me escape
+    del cumpleaños de una hermana de comunidad, nos vestimos de unos escolares que no recuerdo el nombre,
+    fue en la casa de tu amiga, hablamos, incluso te hice un chupeton, odio mi cabeza por recordar todo,
+    sabiendo que ya me olvidaste.
+    \n\n Tambien recuerdo que el 31 por la noche vimos peliculas de terror hasta la madrugada, me hubiera gustado que fuera juntos
+    pero como soy un cobarde, nunca exprese todo lo que sentia por ti y de igual manera esas cosas que me hubieran gustado hacer.`,
+    quote: 'Se feliz, nunca dejes de sonreir, tienes unos ojos hermosos'
   },
   {
     id: 'page-4',
@@ -75,25 +117,34 @@ export const INITIAL_MEMORIES: MemoryPage[] = [
     monthKey: 'NOVIEMBRE DE 2024',
     title: 'Conversaciones al atardecer',
     subtitle: 'Noches largas de confidencias',
-    location: 'El mirador de la ciudad',
     photos: [
       {
         id: 'p4-1',
-        url: '/images/p4_1.jpg',
+        url: '/images/35.png',
         caption: 'El horizonte al caer la noche',
         rotation: -1.2,
         alt: 'Vista nocturna de la costa con luces suaves'
       },
       {
         id: 'p4-2',
-        url: '/images/p4_2.jpg',
+        url: '/images/29.png',
         caption: 'Momentos congelados en el tiempo',
         rotation: 1.8,
         alt: 'Fotografía analógica de paisaje'
       }
     ],
-    storyText: `Con la llegada del frío de noviembre, las horas se pasaban volando entre tazas calientes y confidencias sinceras. Fue en esa época cuando nos mostramos vulnerables, compartiendo miedos, sueños y aquellas historias que no se le cuentan a cualquiera.\n\nMe impactó la autenticidad con la que escuchabas y la delicadeza con la que cuidabas cada palabra. Descubrí en ti una sensibilidad inmensa y una fuerza interior que siempre admiraré.`,
-    quote: 'Encontrar a alguien con quien hablar con el alma descalza es un regalo escaso.'
+    storyText: `Este mes no recuerdo mucho, pero la pasamos bien, cuando me acompañaste a comprar el collar para mi perro raiden,
+    tambien cuando coincidimos en la playa, tu con tus amigas y yo con mi comunidad, si te habia dicho que iba a ir,
+    te vi caminando, te llame y te bese, recuerdo ese lindo vestido y lo hermosa que estabas con esas pantunflas de oso polar.
+    \n\n Quiero tomar este espacio, para decirte que te quiero mucho, cuenta conmigo, aunque sea la ultima persona en la que pienses,
+    lamento no haber sido esa persona en la que confiaras y lo peor, no haber sanado tu pasado,
+    estudia que lo que te gusta, siempre te lo dije, que en 2027 te iba a ayudar cuando termine la universidad,
+    que te iba a mantener y tu te reias, cuidate mucho, aprendi a vivir por ti, me sacaste de mi soledad que tenia
+    y ese vacio por el que pasaba, porque te lo conte, hice cosas que nunca pense hacer, gracias por sacar esa personalidad,
+    aunque no fui lo sufiente valiente para expresarte todo lo que te amo, por ser un cobarde, eres increible Jami, me encanta 
+    lo fria que aveces eras, pero aun asi te elegi para que seas tú, incluso se venian pensamientos de casarnos y tener hijos, cuando siempre he dicho, que no haria eso,
+    el hubiera no existe, si no esto no se llamaria vida, cuidate mucho.`,
+    quote: 'Te quiero mucho'
   },
   {
     id: 'page-5',
@@ -102,45 +153,64 @@ export const INITIAL_MEMORIES: MemoryPage[] = [
     monthKey: 'DICIEMBRE DE 2024',
     title: 'Luces de fin de año',
     subtitle: 'La calidez en el mes más frío',
-    location: 'La plaza iluminada',
     photos: [
       {
         id: 'p5-1',
-        url: '/images/p5_1.jpg',
+        url: '/images/15.png',
+        caption: 'Luces navideñas y frío compartido',
+        rotation: 1.0,
+        alt: 'Luces parpadeantes en la noche'
+      },
+            {
+        id: 'p5-1',
+        url: '/images/25.png',
         caption: 'Luces navideñas y frío compartido',
         rotation: 1.0,
         alt: 'Luces parpadeantes en la noche'
       }
     ],
-    storyText: `Diciembre llenó la ciudad de luces y de un ritmo diferente. En medio del bullicio de las fiestas, nosotros encontramos nuestro propio ritmo pausado. Brindamos por el año que se iba y por todo lo que habíamos comenzado a construir casi sin darnos cuenta.`,
-    quote: 'Hay luces que no brillan en el cielo, sino en los ojos de quien te acompaña.'
+    storyText: `El fin de uno de los mejores años de mi vida, lamento no haber hecho esa casita de jengibre,
+    aunque nunca te lo dije, este mes y dos meses siguiente del 2025, fue cuando peor la pase monetariamente,
+    pero aun asi recuerdo haberte regalado una cartera negra, que nunca te vi usar, porque despues de unos meses dejaste usar carteras,
+    aunque creo que si me mandaste una foto cuando estabas en la u y la llevaste. Queria que el 2026 sea diferente
+    pasar estas fechas como deben de ser y crear recuerdos valiosos de la vida, no se pudo pero igual,
+    fue el primer año que pase con una pareja, nunca habia experimentado todo eso de los meses, estaba enamorado, incluso tu me comenzaste a llamar cariño,
+    y de igual manera yo comence hacerlo, hasta que un punto me llamaste amor y yo tambien lo dije. Te amo Jami, con todo mi corazon, ojala encontrar y hablar todo esto alguna vez
+    ya no guardo esperanza de volver a ti, pero al menos de hablar las cosas en persona que nunca hablamos.
+    \n\n Recuerdo comer un paneton y tasa de chocolate en el segundo piso del mall, porque soy un estupido y no hice las cosas bien,
+    siempre me marcara el dicho de aprender a valorar las cosas despues de haberlas perdido, te amo.
+    \n\n Fueron de las pocas navidades que pase feliz, porque estabas tu, no cerca a mi, pero lo estabas,
+    sigo siendo un resentido porque nunca con mi familia pase algo bonito, aunque suene como excusa.`,
+    quote: 'Gracias por tu cariño'
   },
   {
     id: 'page-6',
     pageNumber: 'PÁGINA 06',
     date: 'ENERO DE 2025',
     monthKey: 'ENERO DE 2025',
-    title: 'El primer viaje juntos',
-    subtitle: 'Nuevos horizontes y carreteras nevadas',
-    location: 'Pueblo entre las montañas',
+    title: 'Te amo',
     photos: [
       {
         id: 'p6-1',
-        url: '/images/p6_1.jpg',
+        url: '/images/28.png',
         caption: 'Las colinas heladas de aquel frío enero',
         rotation: 2.0,
         alt: 'Montañas nevadas con cielo azul profundo'
       },
       {
         id: 'p6-2',
-        url: '/images/p6_2.jpg',
+        url: '/images/11.png',
         caption: 'Luces cálidas al final de la jornada',
         rotation: -2.2,
         alt: 'Refugio acogedor con chimenea'
       }
     ],
-    storyText: `Enero de 2025 arrancó con una escapada lejos del ruido cotidiano. La carretera rodeada de paisajes blancos, la música sonando de fondo y la sensación de libertad absoluta convirtieron esos días en una burbuja atemporal.\n\nRecuerdo perder la noción del tiempo mirando las montañas a través del cristal mientras compartíamos una manta y un chocolate caliente. Todo parecía encajar con una naturalidad perfecta.`,
-    quote: 'El viaje no era el destino, sino el refugio que construíamos al caminar juntos.'
+    storyText: `De este mes tampoco recuerdo mucho, seguramente fue porque fue el peor mes economicamente hablando,
+    nunca te lo dije porque no eres de las chicas que exigian tanto, pero a mi siempre me gusto darte lo mejor, aunque en ese tiempo todavia no podia,
+    no saliamos a restaurantes bonitos porque como no tenia tanto dinero, preferia no verte, que pasar verguenza, siempre fui de la idea de que el hombre debe de pagar, 
+    espero me entiendas, pero si recuerdo que lo ultimo de dinero me meti a un curso de programacion, para saber las bases y hacer lo que tu ya sabes de los siguientes meses.
+    \n\n Te amo mucho Jami, espero no te lleves lo mal de mi y tambien las experiencias que yo tomo como bonitos recuerdos. `,
+    quote: 'Odio no poder abrazarte nunca mas, era tan calido como ver tu sonrisa'
   },
   {
     id: 'page-7',
@@ -149,58 +219,132 @@ export const INITIAL_MEMORIES: MemoryPage[] = [
     monthKey: 'FEBRERO DE 2025',
     title: 'Detalles cotidianos',
     subtitle: 'El valor de lo sencillo',
-    location: 'Nuestra cafetería habitual',
+    location: 'Mayascon',
     photos: [
       {
         id: 'p7-1',
-        url: '/images/p7_1.jpg',
+        url: '/images/36.png',
         caption: 'Dos tazas y un par de risas',
         rotation: -1.3,
         alt: 'Dos tazas de café sobre mesa de madera'
       }
     ],
-    storyText: `Febrero transcurrió con la tranquilidad de la rutina bien entendida. Descubrimos que el amor también reside en la constancia, en el mensaje de buenos días, en preparar la cena juntos y en saber que el otro está ahí para escucharte al final de un día largo.`,
-    quote: 'La felicidad consiste en encontrar lo extraordinario en medio de lo ordinario.'
+    storyText: `Recuerdo cuando llegaste a mi casa por primera vez, fue algo loco y tonto de mi parte, te dije que estaba solo y podias venir,
+    tu llegaste aunque no pensaba si ibas a venir, antes limpie y heche demasiado clorox, porque tu lo notaste, vimos peliculas, los snacks que trajiste, una galletas, se hicieron cosas claramente,
+    fue la primera vez que dormimos, y me acabo de recordardar cuando en septiembre de la nada dijiste, hay que dormir juntos jaja, que bonito recuerdo,
+    despues de dormir en la madrugada llego mi papa de viaje, me levantaste, todo fue rapido, pidi un taxi y te fuiste a casa, lo recuerdo porque por ti descargue indriver,
+    y ahi estan mis solicitudes fue un 13 de febrero, ese mes tambien llegaste mas veces, y dormimos juntos, cosas que todavia me martiriza porque paro encerrado en mi cuarto
+    solo pero con un vacio mas fuerte, tu ya no estas aqui.
+    \n\n Dias despues de la primera vez de dormir juntos fui a verte, para ir a la playa, si recuerdo eso, saliste con un vestido y unas chanclas, recuerdo todo, mi memoria es media rara jajaja,
+    te dije para meternos, a ti nunca te gusto, me lo comentaste pero aun asi te preste mi short que lleve para el regreso y mi polo, y asi te metiste,
+    esa ropa la tengo ahi, ya no la voy a usar, te quiero.
+    \n\n Nuestro primer viaje juntos, fuimos a Mayascon por nuestro aniversario, no supe de donde saque dinero pero lo hice, viajamos, la caminata de 30 minutos, recuerdo que me tomaste una foto de espalda y lo subiste a tu estado.
+    nos tomamos fotos en la cara del mono, esas fotos las debes de tener tu, si es que no las borraste, y tambien estan en mi celular de ese tiempo, lo tengo que arreglar.
+    Recuerdo que llevaste cartera, y como el camino para llegar a la ultima laguna era subir escalera y pasar por lugares estrechos,
+    me la puse en mi cuello para llegar a la ultima laguna, nos bañamos, claramente con medidas de seguridad, luego bajamos
+    a comer, nos cambiamos en el baño de la casa de la señora que nos iba a dar el almuerzo, tenias un polo marron,
+    mi memoria recuerda todo, cuando pasaste al baño y me dijiste entra, nos cambiamos juntos.
+    Llegamos cansados, en el carro para pimentel me dormi, me levantaste y te deje en tu casa.
+    algo bonito que no olvidare.`,
+    quote: 'Siempre quiero verte feliz.'
   },
   {
     id: 'page-8',
     pageNumber: 'PÁGINA 08',
     date: 'MARZO DE 2025',
     monthKey: 'MARZO DE 2025',
-    title: 'El cambio de estación',
-    subtitle: 'La llegada del viento templado',
+    title: 'Tu cumpleaños, lamento no haber sido especial',
     location: 'El parque de los cerezos',
     photos: [
       {
         id: 'p8-1',
-        url: '/images/p8_1.jpg',
-        caption: 'Las primeras flores asomándose al sol',
+        url: '/images/37.png',
+        caption: 'La foto no es la misma, pero es de la misma empresa',
         rotation: 1.5,
-        alt: 'Ramas con pequeños brotes verdes'
+        alt: 'La foto no es la misma, pero es de la misma empresa que compre para 2026'
       }
     ],
-    storyText: `Marzo trajo consigo los primeros indicios de que el invierno se retiraba. El sol empezó a calentar un poco más y las tardes se hicieron ideales para volver a caminar sin prisa, viendo cómo la naturaleza despertaba lentamente a nuestro alrededor.`,
-    quote: 'Cada flor que se abre es un recordatorio de que los inviernos siempre pasan.'
+    storyText: `Un mes importante para mi, ya que el 22 de marzo fue tu cumpleaños, antes de conocerte el 27 de agosto, hablamos de cuando era tu cumpleaños,
+    me lo dijiste 22 de marzo, guarde esa captura y nunca se me olvido de mi cabeza. Lo unico que lamento es no haberte dado ese cumpleaños que siempre quise
+    solamente te lleve flores, para ser mas detallista fueron rosas rojas en Luna cix lo compre, te las entregue y cuando abrio la puerta fue tu primita, fue la primera vez que la vi. Cuando digo que recuerdo todo es todo
+    literalmente, no tuve el caracter suficiente para planear algo, pero fuimos a cenar, te deje en tu casa y al momento de regresarme por el camino encontre a tu madre, tia y prima, 
+    te lo comente y nos reimos jaja. 
+    \n\n Tambien recuerdo este mes porque al inicio llegabas por mi casa, para que ensayaras con tu amiga
+    para el tema del aniversario, aunque al final fue cancelado.
+    \n\n finales de mes me comenzo a ir bien y el siguiente mes es donde comenzamos a salir con mas frecuencia y seguimos con otro viaje a Tucume, no eran los mejores lugares
+    pero espero la pasaras biem. Te amo mucho.
+    \n\n La foto es referencial, pero es de la misma tienda donde las compre.`,
+    quote: 'Algun dia cumplire lo de tu cumpleaños.'
   },
   {
     id: 'page-9',
     pageNumber: 'PÁGINA 09',
     date: 'ABRIL DE 2025',
     monthKey: 'ABRIL DE 2025',
-    title: 'Lluvias de abril',
+    title: 'El mejor mes de mi vida',
     subtitle: 'Refugiándonos bajo el mismo paraguas',
     location: 'Paseo bajo la lluvia',
     photos: [
       {
         id: 'p9-1',
-        url: '/images/p9_1.jpg',
-        caption: 'Gotas de lluvia sobre las hojas verdes',
+        url: '/images/38.png',
         rotation: -2.0,
         alt: 'Gotas de lluvia brillando en las hojas'
-      }
+      }, 
+            {
+        id: 'p9-1',
+        url: '/images/39.png',
+        rotation: -2.0,
+        alt: 'Gotas de lluvia brillando en las hojas'
+      },
+                  {
+        id: 'p9-1',
+        url: '/images/40.png',
+        rotation: -2.0,
+        alt: 'Gotas de lluvia brillando en las hojas'
+      },
+                  {
+        id: 'p9-1',
+        url: '/images/10.png',
+        rotation: -2.0,
+        alt: 'Gotas de lluvia brillando en las hojas'
+      },
+                        {
+        id: 'p9-1',
+        url: '/images/9.png',
+        rotation: -2.0,
+        alt: 'Gotas de lluvia brillando en las hojas'
+      },
+                        {
+        id: 'p9-1',
+        url: '/images/11.png',
+        rotation: -2.0,
+        alt: 'Gotas de lluvia brillando en las hojas'
+      },
+                        {
+        id: 'p9-1',
+        url: '/images/12.png',
+        rotation: -2.0,
+        alt: 'Gotas de lluvia brillando en las hojas'
+      },
+      
+      
     ],
-    storyText: `Abril se vistió de nubes grises y lloviznas persistentes. Lejos de desanimarnos, encontramos una magia diferente en compartir el paraguas, esquivar los charcos de la acera y terminar la tarde en cualquier sitio resguardados con algo caliente entre las manos.`,
-    quote: 'Hay quienes caminan bajo la lluvia y otros que simplemente se mojan.'
+    storyText: `Abril el mejor mes de mi vida, de mi existencia a mis 21 años, gracias por hacerme feliz Jami, gracias por hacerme sentir que estaba vivo.
+    \n\n Las primeras semanas no salimos mucho porque no tenia celular, pero me fue mejor, comence a ganar dinero, vi resultados, vendi mi canal para tener capital y comenzar, en rubro diferente, eso nunca te lo comente.
+    Espere a que mis padres me compraran como regalo, tu venias a verme al parque de mi casa.
+    \n\n Fue el mejor cumpleaños que vivi, sabes porque te tenia a ti, recuerdo que me llevaste a ver una pelicula de romance, no recuerdo el nombre pero antes de eso me regalaste como sorpresa un muñeco de spiderman,
+    nadie habia hecho nada por mi, como sorpresa, en mis cumpleaños siempre la pasaba solo en mi cuarto, nunca me gusto celebrarlo por circustancias de mi padre, aunque años anteriores no habian problemas, quede con la frustracion de niño.
+    Me sali del tema pero ese regalo me hizo feliz, me comentaste que antes de salir de clases o de bailar de la universidad si no mas recuerdo, fuiste con una amiga a comprar,
+    incluso recuerdo como estabas vestida, con una casaca negra, y el peculiar pantalon rojo con botas negras, siempre te lo dije que observaba lo minimo, y recuerdo todo eso.
+    Luego fuimos a comer unos frappes y tu carrot cake, se me vino a la mente momentos de septiembre la primera vez que comiste carrot cake.
+    \n\n Fui la persona mas feliz ese dia, aun tengo aca el spiderman y me hace acordar a ti, ya no tengo tanta tristeza, tengo que vivir con lo aprendido y lo feliz que fui contigo.
+    \n\n Tambien viajamos el 20 de abril por segunda vez a Tucume, pasamos momentos inolvidables, tengo los videos, las fotos, cuando subimos el cerro, me tomaste fotos, nos tomamos fotos,
+    recuedo cuando te enojaste porque alce mi voz a la señora donde comimos, pero luego en el camino de regreso nos abrazamos, eres muy sencible a pesar de tratar de ocultar tus sentimientos.
+    Te quiero mucho Jami, no quiero olvidarte, quiero aprender de lo vivido, ojala todo fuera diferente. 
+    \n\n Posdata, este año fui, incluso te mande el video por el camino donde pasamos, y te dije recuerdos de vietnam, lo hermosa que te veias,
+    aunque te reiste, te quiero mucho, te extraño.`,
+    quote: 'Se feliz Jami'
   },
   {
     id: 'page-10',

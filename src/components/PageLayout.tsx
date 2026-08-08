@@ -68,16 +68,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
           </div>
 
           <div className="flex items-center gap-2">
-            {onOpenEditPage && (
-              <button
-                onClick={onOpenEditPage}
-                className="flex items-center gap-1.5 text-xs font-sans-clean text-[#5C524A] hover:text-[#722F37] transition-colors py-1 px-3 rounded-full bg-[#F3EDE2] border border-[#E0D5C3]"
-                title="Editar este recuerdo"
-              >
-                <Edit3 className="w-3.5 h-3.5 text-[#722F37]" />
-                <span className="hidden sm:inline">Editar</span>
-              </button>
-            )}
+            {/* Botón de editar eliminado a petición del usuario */}
           </div>
         </div>
 
@@ -136,7 +127,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
                         initial={{ opacity: 0, scale: 0.95, rotate: 0 }}
                         animate={{ opacity: 1, scale: 1, rotate: rot }}
                         transition={{ duration: 0.7, delay: 0.15 * pIdx }}
-                        className="photo-frame group cursor-pointer max-w-sm w-full relative"
+                        className="photo-frame group cursor-pointer max-w-[280px] w-full relative"
                         onClick={() => onOpenPhoto(photo)}
                       >
                         <div className="relative overflow-hidden bg-[#F3EFE6]">

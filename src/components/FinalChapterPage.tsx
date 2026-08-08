@@ -54,15 +54,7 @@ export const FinalChapterPage: React.FC<FinalChapterPageProps> = ({
           </div>
 
           <div className="flex items-center gap-2">
-            {onOpenEditPage && (
-              <button
-                onClick={onOpenEditPage}
-                className="flex items-center gap-1.5 text-xs font-sans-clean text-[#C4B7A5] hover:text-[#E8DCCB] transition-colors py-1.5 px-3 rounded-full bg-[#2A2420] border border-[#423933]"
-              >
-                <Edit3 className="w-3.5 h-3.5 text-[#D4A373]" />
-                <span className="hidden sm:inline">Editar Carta</span>
-              </button>
-            )}
+            {/* Botón de editar eliminado a petición del usuario */}
             <button
               onClick={onGoHome}
               className="flex items-center gap-1.5 text-xs font-sans-clean text-[#C4B7A5] hover:text-[#E8DCCB] transition-colors py-1.5 px-3 rounded-full bg-[#2A2420] border border-[#423933]"

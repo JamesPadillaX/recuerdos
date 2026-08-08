@@ -1,7 +1,7 @@
 import { MemoryPage } from '../types';
 import { INITIAL_MEMORIES } from '../data/memories';
 
-const STORAGE_KEY = 'album_recuerdos_memories_v1';
+const STORAGE_KEY = 'album_recuerdos_memories_v2';
 
 export function getSavedMemories(): MemoryPage[] {
   try {
