@@ -68,7 +68,7 @@ export const INITIAL_MEMORIES: MemoryPage[] = [
         alt: 'Camino de hojas secas al atardecer'
       }
     ],
-    storyText: `Este mes fui increible para mi te regale flores por primera vez, no tengo fotos de eso, porque a mi no me gustaban las fotos, aunque al final termine amandolas porque solo aparecias tu, de igual manera son recuerdos que nunca olvidare, cuando te las entregue, incluso cuando las compre porque no habia hecho nunca eso, recuerdo incluso que le pedi ayuda a un chico
+    storyText: `Este mes fue increible para mi te regale flores por primera vez, no tengo fotos de eso, porque a mi no me gustaban las fotos, aunque al final termine amandolas porque solo aparecias tu, de igual manera son recuerdos que nunca olvidare, cuando te las entregue, incluso cuando las compre porque no habia hecho nunca eso, recuerdo incluso que le pedi ayuda a un chico
     y me dio el lugar donde las compro, te lo habia comentado despues de cenar.
     \n\n Tantas experiencias, incluso tu amiga nos tomo una foto y me la enseñaste, la cual editaste para subir a nuestros 
     estados, seguramente tu no lo recuerdas, pero yo recuerdo absolutamente todo, cuando te iba a ver a la universidad, me fui de viaje por una semana, cuando llegue 

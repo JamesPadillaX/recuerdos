@@ -102,10 +102,13 @@ export default function App() {
     }
   };
 
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'instant' });
+
   // Next Page
   const handleNextPage = () => {
     if (currentIndex < memories.length - 1) {
       setCurrentIndex((prev) => prev + 1);
+      scrollTop();
     }
   };
 
@@ -113,8 +116,10 @@ export default function App() {
   const handlePrevPage = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
+      scrollTop();
     } else {
       setViewMode('collage');
+      scrollTop();
     }
   };
 
@@ -122,6 +127,7 @@ export default function App() {
   const handleSelectPage = (index: number) => {
     setCurrentIndex(index);
     setViewMode('album');
+    scrollTop();
   };
 
   // Save customized memories
