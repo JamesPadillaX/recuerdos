@@ -34,7 +34,7 @@ export const CollagePage: React.FC<CollagePageProps> = ({ onNext, onBack }) => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-3xl md:text-5xl font-serif-display font-semibold text-[#5C1D24] mb-3 drop-shadow-sm"
         >
-          NUNCA TE OLVIDARE JAMI, APRENDERE A VIVIR SIN TI
+          GRACIAS POR TODO LO VIVIDO, TE QUIERO
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0 }}

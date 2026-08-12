@@ -91,6 +91,18 @@ export default function App() {
     }
   }, [memories, currentIndex]);
 
+  // Update browser tab title on page/view change
+  useEffect(() => {
+    const page = memories[currentIndex] ?? memories[0];
+    if (viewMode === 'cover') {
+      document.title = 'Recuerdos';
+    } else if (viewMode === 'collage') {
+      document.title = 'Recuerdos — Nuestro Álbum';
+    } else if (page) {
+      document.title = `Recuerdos — ${page.title}`;
+    }
+  }, [viewMode, currentIndex, memories]);
+
   // Start story from Cover
   const handleStartStory = () => {
     setViewMode('collage');
